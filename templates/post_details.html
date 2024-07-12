@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} Post Details {% endblock %}
+
+{% block content %}
+
+<br>
+<h4>{{ post.title }}</h4>
+<h6>By {{ post.autor }} on {{ post.date_posted }}</h6>
+<p>{{ post.content }}</p>
+<a href="{{ url_for('edit_post', id=post.id) }}">Update</a>
+<hr> 
+{% endblock %}
